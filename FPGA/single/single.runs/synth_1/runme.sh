@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.runs/synth_1'
+HD_PWD='D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,4 +41,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log testbench.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source testbench.tcl
+EAStep vivado -log Nexys4DDR.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Nexys4DDR.tcl

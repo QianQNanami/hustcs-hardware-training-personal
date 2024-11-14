@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1731568715">
+  <File Type="ROUTE-PWR" Name="Nexys4DDR_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Nexys4DDR.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="Nexys4DDR_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Nexys4DDR_reports.tcl"/>
+  <File Type="OPT-RQA-PB" Name="Nexys4DDR_rqa_opted.pb"/>
+  <File Type="BITSTR-MMI" Name="Nexys4DDR.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Nexys4DDR_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Nexys4DDR_timing_summary_init.rpt"/>
+  <File Type="OPT-TIMING" Name="Nexys4DDR_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Nexys4DDR_opt.dcp"/>
+  <File Type="OPT-DRC" Name="Nexys4DDR_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Nexys4DDR.hwdef"/>
+  <File Type="PWROPT-DCP" Name="Nexys4DDR_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="Nexys4DDR_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Nexys4DDR_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Nexys4DDR_placed.dcp"/>
+  <File Type="PLACE-IO" Name="Nexys4DDR_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Nexys4DDR_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Nexys4DDR_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Nexys4DDR_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Nexys4DDR_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Nexys4DDR_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Nexys4DDR_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="Nexys4DDR.bin"/>
+  <File Type="PLACE-TIMING" Name="Nexys4DDR_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="Nexys4DDR_power_routed.rpx"/>
+  <File Type="PLACE-RQA-PB" Name="Nexys4DDR_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Nexys4DDR_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="Nexys4DDR.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Nexys4DDR_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Nexys4DDR_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Nexys4DDR_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="Nexys4DDR.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="Nexys4DDR_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Nexys4DDR_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Nexys4DDR_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Nexys4DDR_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Nexys4DDR_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Nexys4DDR_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="Nexys4DDR_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Nexys4DDR_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Nexys4DDR_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Nexys4DDR_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-RQS-PB" Name="Nexys4DDR_rqs_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="Nexys4DDR_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Nexys4DDR_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Nexys4DDR_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Nexys4DDR_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Nexys4DDR_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Nexys4DDR_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Nexys4DDR_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Nexys4DDR_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Nexys4DDR_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Nexys4DDR_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Nexys4DDR_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Nexys4DDR_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Nexys4DDR_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Nexys4DDR_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Nexys4DDR_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Nexys4DDR_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="Nexys4DDR.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Nexys4DDR_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Nexys4DDR_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="Nexys4DDR.nky"/>
+  <File Type="BITSTR-BMM" Name="Nexys4DDR_bd.bmm"/>
+  <File Type="PDI-FILE" Name="Nexys4DDR.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="Nexys4DDR_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="Nexys4DDR_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="Nexys4DDR.rcfi"/>
+  <File Type="CFI_FILE" Name="Nexys4DDR.cfi"/>
+  <File Type="RNPI_FILE" Name="Nexys4DDR.rnpi"/>
+  <File Type="NPI_FILE" Name="Nexys4DDR.npi"/>
+  <File Type="RBD_FILE" Name="Nexys4DDR.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Nexys4DDR.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="Nexys4DDR.sysdef"/>
+  <File Type="BG-BGN" Name="Nexys4DDR.bgn"/>
+  <File Type="BG-DRC" Name="Nexys4DDR.drc"/>
+  <File Type="RDI-RDI" Name="Nexys4DDR.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="Nexys4DDR_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="Nexys4DDR_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/7SegDisplay.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ClockDivider.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/LedCounter.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/adder.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/alu.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/calccontrol.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/comparator.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/controlsign.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/counter.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/hardware_line_layout.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/leftshifter.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/main.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux2x1.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux4x2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/number_sign_extend.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/number_zero_extend.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/ram.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/regfile.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/register.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/rom.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/nexys4ddr.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Nexys4DDR"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/board/Nexys4DDR_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Nexys4DDR_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1711065159"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/Nexys4DDR.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

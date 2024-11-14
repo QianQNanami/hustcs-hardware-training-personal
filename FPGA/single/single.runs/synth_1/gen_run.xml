@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1731508713" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Nexys4DDR.dcp">
-  <File Type="PA-TCL" Name="testbench.tcl"/>
-  <File Type="REPORTS-TCL" Name="testbench_reports.tcl"/>
-  <File Type="RDS-RDS" Name="testbench.vds"/>
-  <File Type="RDS-UTIL" Name="testbench_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="testbench_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="testbench.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1731568654" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Nexys4DDR.dcp">
+  <File Type="PA-TCL" Name="Nexys4DDR.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="Nexys4DDR_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="Nexys4DDR_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Nexys4DDR.vds"/>
+  <File Type="RDS-UTIL" Name="Nexys4DDR_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Nexys4DDR_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Nexys4DDR.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="Nexys4DDR_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="Nexys4DDR_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/7SegDisplay.v">
@@ -106,13 +109,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/nexys4ddr.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/number_sign_extend.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -155,7 +151,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/testbench.v">
+    <File Path="$PSRCDIR/sources_1/new/nexys4ddr.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -164,8 +160,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="testbench"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
+      <Option Name="TopModule" Val="Nexys4DDR"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">

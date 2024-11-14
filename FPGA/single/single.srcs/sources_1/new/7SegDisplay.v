@@ -4,9 +4,6 @@ module DisplayNumber (
     input [3:0] number,
     output reg [7:0] SEG
 );
-    initial begin
-        SEG = 8'b00000000;
-    end
     always@(number[3:0]) begin
         case(number[3:0])
            4'b0000: SEG[7:0] = 8'b11000000;

@@ -8,11 +8,12 @@ module RAM (
     output wire [31:0] Dout
 );
     reg [31:0] mem [0:1023];
-    initial begin
-        for (integer i = 0; i < 1024; i = i + 1) begin
-            mem[i] = 0;
-        end
-    end
+    // integer i;
+    // initial begin
+    //     for (i = 0; i < 1024; i = i + 1) begin
+    //         mem[i] = 0;
+    //     end
+    // end
 
     always @(posedge Clk) begin
         if (str) begin

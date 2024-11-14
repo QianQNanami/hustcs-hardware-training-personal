@@ -1,0 +1,86 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Nov 14 15:19:12 2024
+| Host         : Expect2004 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Nexys4DDR_control_sets_placed.rpt
+| Design       : Nexys4DDR
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |     8 |
+|    Minimum number of control sets                        |     8 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    25 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |     8 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     4 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              13 |            5 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              43 |           13 |
+| Yes          | No                    | No                     |              63 |           36 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+-----------------------------------------------+-----------------------------------+------------------+----------------+--------------+
+|      Clock Signal     |                 Enable Signal                 |          Set/Reset Signal         | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------+-----------------------------------------------+-----------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG        |                                               |                                   |                2 |              2 |         1.00 |
+|  clk_divide_led/clk_N |                                               | led_counter/id[1]                 |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG        |                                               | clk_divide_led/counter[8]_i_1_n_0 |                3 |              9 |         3.00 |
+|  clk_divide_led/clk_N |                                               |                                   |                3 |             11 |         3.67 |
+|  clk_IBUF_BUFG        |                                               | clk_divide/clear                  |                7 |             26 |         3.71 |
+|  CLKCPU_BUFG          | cpu/regfile/registers_reg_r1_0_31_0_5_i_10_96 |                                   |               14 |             31 |         2.21 |
+|  CLKCPU_BUFG          | cpu/regfile/WE0                               |                                   |               22 |             32 |         1.45 |
+|  CLKCPU_BUFG          | cpu/regfile/RegWrite                          |                                   |               11 |             88 |         8.00 |
++-----------------------+-----------------------------------------------+-----------------------------------+------------------+----------------+--------------+
+
+

@@ -3,12 +3,18 @@
 module SingleCycleCPU (
     input Go,
     input CLK,
-    output [31:0] LedData
+    output [31:0] LedData,
+    output [31:0] PC,
+    output [31:0] IR,
+    output [31:0] MDin,
+    output [31:0] RDin,
+    output MemWrite,
+    output RegWrite
 );
 
-    wire [31:0] IR, PCADDR, PCP4, PC;
+    wire [31:0] PCADDR, PCP4;
     wire [3:0] AluOPS;
-    wire halt, JALS, JALRS, URETS, LBUS, BLTUS, BEQS, BNES, MemToRegS, MemWrite, AluSrcBS, RegWrite;
+    wire halt, JALS, JALRS, URETS, LBUS, BLTUS, BEQS, BNES, MemToRegS, AluSrcBS;
     wire RSread, RTread, CSC, Stype, ecall;
     wire [4:0] R1_wire, R2_wire;
     
@@ -62,7 +68,7 @@ module SingleCycleCPU (
         .Dout(R2_wire),
         .Sel(ecall)
     );
-    wire [31:0] RDin, R1, R2;
+    wire [31:0] R1, R2;
     RegFile regfile(
         .Din(RDin),
         .Clk(CLK),
@@ -151,7 +157,6 @@ module SingleCycleCPU (
         .ALUless(ALUless)
     );
     
-    wire [31:0] MDin;
     assign MDin = R2;
 
     wire [31:0] MEMOUT;
@@ -255,9 +260,5 @@ module SingleCycleCPU (
         .WE(comparatorR122_result & ecall),
         .RST(1'b0)
     );
-
-    always @(posedge CLK) begin
-        $display("Cycle: %d, PC: %d\n IR: %d\n", TotalCycle, PC, IR);
-    end
 
 endmodule
