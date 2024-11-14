@@ -1,0 +1,39 @@
+Vivado Simulator v2023.2
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: F:/Verilog/Vivado/2023.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ClockDivider(N=4)
+Compiling module xil_defaultlib.LedCounter
+Compiling module xil_defaultlib.Register
+Compiling module xil_defaultlib.InstructionROM
+Compiling module xil_defaultlib.Adder
+Compiling module xil_defaultlib.CalcController
+Compiling module xil_defaultlib.ControlSignalGen
+Compiling module xil_defaultlib.HardwiredController
+Compiling module xil_defaultlib.MUX2x1(DATAWIDTH=5)
+Compiling module xil_defaultlib.RegFile
+Compiling module xil_defaultlib.MUX2x1(DATAWIDTH=12)
+Compiling module xil_defaultlib.NumberSignExtend(INPUT_WIDTH=12)
+Compiling module xil_defaultlib.NumberSignExtend(INPUT_WIDTH=20)
+Compiling module xil_defaultlib.LeftShifter
+Compiling module xil_defaultlib.MUX2x1
+Compiling module xil_defaultlib.myALU
+Compiling module xil_defaultlib.RAM
+Compiling module xil_defaultlib.MUX4x2(DATAWIDTH=8)
+Compiling module xil_defaultlib.NumberZeroExtend(INPUT_WIDTH=8)
+Compiling module xil_defaultlib.Counter
+Compiling module xil_defaultlib.Comparator(WIDTH=32)
+Compiling module xil_defaultlib.MUX2x1(DATAWIDTH=1)
+Compiling module xil_defaultlib.SingleCycleCPU
+Compiling module xil_defaultlib.DisplayNumber
+Compiling module xil_defaultlib.Nexys4DDR
+Compiling module xil_defaultlib.testbench
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot testbench_behav

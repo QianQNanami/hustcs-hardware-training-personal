@@ -1,0 +1,46 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/7SegDisplay.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DisplayNumber
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/ClockDivider.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ClockDivider
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/LedCounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LedCounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/calccontrol.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CalcController
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/comparator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Comparator
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/controlsign.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ControlSignalGen
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/counter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/hardware_line_layout.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module HardwiredController
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/leftshifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LeftShifter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/main.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SingleCycleCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/mux2x1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX2x1
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/mux4x2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX4x2
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/nexys4ddr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Nexys4DDR
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/number_sign_extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NumberSignExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/number_zero_extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module NumberZeroExtend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/ram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM
+WARNING: [VRFC 10-8374] loop variable declaration is not allowed in this mode of Verilog [D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/ram.v:12]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+WARNING: [VRFC 10-8374] loop variable declaration is not allowed in this mode of Verilog [D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/regfile.v:16]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Register
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstructionROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench

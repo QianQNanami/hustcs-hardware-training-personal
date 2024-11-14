@@ -1,0 +1,30 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../single.srcs/sources_1/new/7SegDisplay.v" \
+"../../../../single.srcs/sources_1/new/ClockDivider.v" \
+"../../../../single.srcs/sources_1/new/LedCounter.v" \
+"../../../../single.srcs/sources_1/new/adder.v" \
+"../../../../single.srcs/sources_1/new/alu.v" \
+"../../../../single.srcs/sources_1/new/calccontrol.v" \
+"../../../../single.srcs/sources_1/new/comparator.v" \
+"../../../../single.srcs/sources_1/new/controlsign.v" \
+"../../../../single.srcs/sources_1/new/counter.v" \
+"../../../../single.srcs/sources_1/new/hardware_line_layout.v" \
+"../../../../single.srcs/sources_1/new/leftshifter.v" \
+"../../../../single.srcs/sources_1/new/main.v" \
+"../../../../single.srcs/sources_1/new/mux2x1.v" \
+"../../../../single.srcs/sources_1/new/mux4x2.v" \
+"../../../../single.srcs/sources_1/new/nexys4ddr.v" \
+"../../../../single.srcs/sources_1/new/number_sign_extend.v" \
+"../../../../single.srcs/sources_1/new/number_zero_extend.v" \
+"../../../../single.srcs/sources_1/new/ram.v" \
+"../../../../single.srcs/sources_1/new/regfile.v" \
+"../../../../single.srcs/sources_1/new/register.v" \
+"../../../../single.srcs/sources_1/new/rom.v" \
+"../../../../single.srcs/sources_1/new/testbench.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

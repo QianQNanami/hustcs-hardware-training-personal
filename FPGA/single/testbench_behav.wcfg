@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="169.201 ns"></ZoomEndTime>
+      <Cursor1Time time="24.200 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="209"></NameColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="39" />
+   <wvobject fp_name="/testbench/uut/cpu/CLK" type="logic">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/PC" type="array">
+      <obj_property name="ElementShortName">PC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/PCP4" type="array">
+      <obj_property name="ElementShortName">PCP4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PCP4[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/IR" type="array">
+      <obj_property name="ElementShortName">IR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IR[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/R1_wire" type="array">
+      <obj_property name="ElementShortName">R1_wire[4:0]</obj_property>
+      <obj_property name="ObjectShortName">R1_wire[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/R2_wire" type="array">
+      <obj_property name="ElementShortName">R2_wire[4:0]</obj_property>
+      <obj_property name="ObjectShortName">R2_wire[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/R1" type="array">
+      <obj_property name="ElementShortName">R1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">R1[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/R2" type="array">
+      <obj_property name="ElementShortName">R2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">R2[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/B1" type="array">
+      <obj_property name="ElementShortName">B1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">B1[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/PCADDR" type="array">
+      <obj_property name="ElementShortName">PCADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PCADDR[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/LedData" type="array">
+      <obj_property name="ElementShortName">LedData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">LedData[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/TotalCycle" type="array">
+      <obj_property name="ElementShortName">TotalCycle[15:0]</obj_property>
+      <obj_property name="ObjectShortName">TotalCycle[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/BEADDR" type="array">
+      <obj_property name="ElementShortName">BEADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">BEADDR[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/JALADDR" type="array">
+      <obj_property name="ElementShortName">JALADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">JALADDR[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/ALURet" type="array">
+      <obj_property name="ElementShortName">ALURet[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALURet[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/MDin" type="array">
+      <obj_property name="ElementShortName">MDin[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MDin[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/MEMOUT" type="array">
+      <obj_property name="ElementShortName">MEMOUT[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEMOUT[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/BES" type="logic">
+      <obj_property name="ElementShortName">BES</obj_property>
+      <obj_property name="ObjectShortName">BES</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/AluOPS" type="array">
+      <obj_property name="ElementShortName">AluOPS[3:0]</obj_property>
+      <obj_property name="ObjectShortName">AluOPS[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/halt" type="logic">
+      <obj_property name="ElementShortName">halt</obj_property>
+      <obj_property name="ObjectShortName">halt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/JALS" type="logic">
+      <obj_property name="ElementShortName">JALS</obj_property>
+      <obj_property name="ObjectShortName">JALS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/JALRS" type="logic">
+      <obj_property name="ElementShortName">JALRS</obj_property>
+      <obj_property name="ObjectShortName">JALRS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/URETS" type="logic">
+      <obj_property name="ElementShortName">URETS</obj_property>
+      <obj_property name="ObjectShortName">URETS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/LBUS" type="logic">
+      <obj_property name="ElementShortName">LBUS</obj_property>
+      <obj_property name="ObjectShortName">LBUS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/BLTUS" type="logic">
+      <obj_property name="ElementShortName">BLTUS</obj_property>
+      <obj_property name="ObjectShortName">BLTUS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/BEQS" type="logic">
+      <obj_property name="ElementShortName">BEQS</obj_property>
+      <obj_property name="ObjectShortName">BEQS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/BNES" type="logic">
+      <obj_property name="ElementShortName">BNES</obj_property>
+      <obj_property name="ObjectShortName">BNES</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/MemToRegS" type="logic">
+      <obj_property name="ElementShortName">MemToRegS</obj_property>
+      <obj_property name="ObjectShortName">MemToRegS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/MemWrite" type="logic">
+      <obj_property name="ElementShortName">MemWrite</obj_property>
+      <obj_property name="ObjectShortName">MemWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/AluSrcBS" type="logic">
+      <obj_property name="ElementShortName">AluSrcBS</obj_property>
+      <obj_property name="ObjectShortName">AluSrcBS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/RegWrite" type="logic">
+      <obj_property name="ElementShortName">RegWrite</obj_property>
+      <obj_property name="ObjectShortName">RegWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/RSread" type="logic">
+      <obj_property name="ElementShortName">RSread</obj_property>
+      <obj_property name="ObjectShortName">RSread</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/RTread" type="logic">
+      <obj_property name="ElementShortName">RTread</obj_property>
+      <obj_property name="ObjectShortName">RTread</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/CSC" type="logic">
+      <obj_property name="ElementShortName">CSC</obj_property>
+      <obj_property name="ObjectShortName">CSC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/Stype" type="logic">
+      <obj_property name="ElementShortName">Stype</obj_property>
+      <obj_property name="ObjectShortName">Stype</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/ecall" type="logic">
+      <obj_property name="ElementShortName">ecall</obj_property>
+      <obj_property name="ObjectShortName">ecall</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/ALUequal" type="logic">
+      <obj_property name="ElementShortName">ALUequal</obj_property>
+      <obj_property name="ObjectShortName">ALUequal</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/ALUless" type="logic">
+      <obj_property name="ElementShortName">ALUless</obj_property>
+      <obj_property name="ObjectShortName">ALUless</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/uut/cpu/ALUB" type="array">
+      <obj_property name="ElementShortName">ALUB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALUB[31:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,27 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/7SegDisplay.v,1731476658,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/ClockDivider.v,,DisplayNumber,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/ClockDivider.v,1731476309,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/LedCounter.v,,ClockDivider,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/LedCounter.v,1731476721,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/adder.v,,LedCounter,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/adder.v,1731426578,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/alu.v,,Adder,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/alu.v,1731551725,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/calccontrol.v,,myALU,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/calccontrol.v,1731426816,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/comparator.v,,CalcController,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/comparator.v,1731410959,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/controlsign.v,,Comparator,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/controlsign.v,1731427628,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/counter.v,,ControlSignalGen,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/counter.v,1731508755,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/hardware_line_layout.v,,Counter,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/hardware_line_layout.v,1731427665,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/leftshifter.v,,HardwiredController,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/leftshifter.v,1731400291,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/main.v,,LeftShifter,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/main.v,1731476569,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/mux2x1.v,,SingleCycleCPU,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/mux2x1.v,1731476748,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/mux4x2.v,,MUX2x1,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/mux4x2.v,1731476759,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/nexys4ddr.v,,MUX4x2,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/nexys4ddr.v,1731507463,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/number_sign_extend.v,,Nexys4DDR,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/number_sign_extend.v,1731396947,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/number_zero_extend.v,,NumberSignExtend,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/number_zero_extend.v,1731397163,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/ram.v,,NumberZeroExtend,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/ram.v,1731508604,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/regfile.v,,RAM,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/regfile.v,1731508574,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/register.v,,RegFile,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/register.v,1731508307,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/rom.v,,Register,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/rom.v,1731425214,verilog,,D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/testbench.v,,InstructionROM,,,,,,,,
+D:/LiuBainian/Project/HardwareCourseDesign/board/single/single.srcs/sources_1/new/testbench.v,1731477365,verilog,,,,testbench,,,,,,,,
