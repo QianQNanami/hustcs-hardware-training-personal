@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Thu Nov 14 15:18:24 2024
+| Date         : Sat Nov 16 00:43:07 2024
 | Host         : Expect2004 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Nexys4DDR_utilization_synth.rpt -pb Nexys4DDR_utilization_synth.pb
 | Design       : Nexys4DDR
@@ -31,13 +31,13 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 1839 |     0 |          0 |     63400 |  2.90 |
-|   LUT as Logic             | 1791 |     0 |          0 |     63400 |  2.82 |
+| Slice LUTs*                | 1867 |     0 |          0 |     63400 |  2.94 |
+|   LUT as Logic             | 1819 |     0 |          0 |     63400 |  2.87 |
 |   LUT as Memory            |   48 |     0 |          0 |     19000 |  0.25 |
 |     LUT as Distributed RAM |   48 |     0 |            |           |       |
 |     LUT as Shift Register  |    0 |     0 |            |           |       |
-| Slice Registers            |  111 |     0 |          0 |    126800 |  0.09 |
-|   Register as Flip Flop    |  111 |     0 |          0 |    126800 |  0.09 |
+| Slice Registers            |  196 |     0 |          0 |    126800 |  0.15 |
+|   Register as Flip Flop    |  196 |     0 |          0 |    126800 |  0.15 |
 |   Register as Latch        |    0 |     0 |          0 |    126800 |  0.00 |
 | F7 Muxes                   |    9 |     0 |          0 |     31700 |  0.03 |
 | F8 Muxes                   |    0 |     0 |          0 |     15850 |  0.00 |
@@ -61,7 +61,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 4     |          Yes |         Set |            - |
-| 107   |          Yes |       Reset |            - |
+| 192   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -151,16 +151,16 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT5     | 1016 |                 LUT |
-| LUT6     |  364 |                 LUT |
-| CARRY4   |  342 |          CarryLogic |
+| LUT5     | 1028 |                 LUT |
+| LUT6     |  372 |                 LUT |
+| CARRY4   |  364 |          CarryLogic |
 | LUT3     |  200 |                 LUT |
-| LUT4     |  121 |                 LUT |
-| LUT2     |  115 |                 LUT |
-| FDRE     |  107 |        Flop & Latch |
+| FDRE     |  192 |        Flop & Latch |
+| LUT4     |  123 |                 LUT |
+| LUT2     |  117 |                 LUT |
 | RAMD32   |   68 |  Distributed Memory |
 | OBUF     |   32 |                  IO |
-| LUT1     |   27 |                 LUT |
+| LUT1     |   31 |                 LUT |
 | RAMS32   |   20 |  Distributed Memory |
 | IBUF     |   17 |                  IO |
 | MUXF7    |    9 |               MuxFx |

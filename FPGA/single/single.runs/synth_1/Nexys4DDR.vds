@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Thu Nov 14 15:17:37 2024
-# Process ID: 24244
+# Start of session at: Sat Nov 16 00:42:01 2024
+# Process ID: 33776
 # Current directory: D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.runs/synth_1
 # Command line: vivado.exe -log Nexys4DDR.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Nexys4DDR.tcl
 # Log file: D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.runs/synth_1/Nexys4DDR.vds
@@ -12,7 +12,7 @@
 # Running On: Expect2004, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 16785 MB
 #-----------------------------------------------------------
 source Nexys4DDR.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 464.031 ; gain = 185.527
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 464.977 ; gain = 185.938
 Command: read_checkpoint -auto_incremental -incremental D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/utils_1/imports/synth_1/Nexys4DDR.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/utils_1/imports/synth_1/Nexys4DDR.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -25,17 +25,29 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 16860
+INFO: [Synth 8-7075] Helper process launched with PID 3676
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1318.188 ; gain = 440.594
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1317.738 ; gain = 440.410
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Nexys4DDR' [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/nexys4ddr.v:3]
 INFO: [Synth 8-6157] synthesizing module 'ClockDivider' [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/ClockDivider.v:3]
 	Parameter N bound to: 100000000 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'ClockDivider' (0#1) [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/ClockDivider.v:3]
 INFO: [Synth 8-6157] synthesizing module 'ClockDivider__parameterized0' [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/ClockDivider.v:3]
-	Parameter N bound to: 1000 - type: integer 
+	Parameter N bound to: 200000 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'ClockDivider__parameterized0' (0#1) [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/ClockDivider.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ClockDivider__parameterized1' [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/ClockDivider.v:3]
+	Parameter N bound to: 781250 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ClockDivider__parameterized1' (0#1) [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/ClockDivider.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ClockDivider__parameterized2' [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/ClockDivider.v:3]
+	Parameter N bound to: 3125000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ClockDivider__parameterized2' (0#1) [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/ClockDivider.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ClockDivider__parameterized3' [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/ClockDivider.v:3]
+	Parameter N bound to: 25000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ClockDivider__parameterized3' (0#1) [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/ClockDivider.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ClockDivider__parameterized4' [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/ClockDivider.v:3]
+	Parameter N bound to: 1000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ClockDivider__parameterized4' (0#1) [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/ClockDivider.v:3]
 INFO: [Synth 8-6157] synthesizing module 'LedCounter' [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/LedCounter.v:3]
 INFO: [Synth 8-226] default block is never used [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/LedCounter.v:21]
 INFO: [Synth 8-6155] done synthesizing module 'LedCounter' (0#1) [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/LedCounter.v:3]
@@ -102,18 +114,18 @@ INFO: [Synth 8-6157] synthesizing module 'DisplayNumber' [D:/LiuBainian/Project/
 INFO: [Synth 8-6155] done synthesizing module 'DisplayNumber' (0#1) [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/7SegDisplay.v:3]
 INFO: [Synth 8-6155] done synthesizing module 'Nexys4DDR' (0#1) [D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.srcs/sources_1/new/nexys4ddr.v:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1432.535 ; gain = 554.941
+Finished RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1432.109 ; gain = 554.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1432.535 ; gain = 554.941
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1432.109 ; gain = 554.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1432.535 ; gain = 554.941
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1432.109 ; gain = 554.781
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1432.535 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1432.109 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -124,31 +136,31 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Nexys4DDR_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1531.559 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1534.375 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1531.559 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1534.375 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1531.559 ; gain = 653.965
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 1534.375 ; gain = 657.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1531.559 ; gain = 653.965
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 1534.375 ; gain = 657.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1531.559 ; gain = 653.965
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 1534.375 ; gain = 657.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1531.559 ; gain = 653.965
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:18 . Memory (MB): peak = 1534.375 ; gain = 657.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -168,7 +180,7 @@ Detailed RTL Component Info :
 	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
 +---Multipliers : 
 	              32x32  Multipliers := 1     
 +---Muxes : 
@@ -209,7 +221,7 @@ DSP Report: Generating DSP Result0, operation Mode is: (PCIN>>17)+A*B.
 DSP Report: operator Result0 is absorbed into DSP Result0.
 DSP Report: operator Result0 is absorbed into DSP Result0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:24 . Memory (MB): peak = 1531.559 ; gain = 653.965
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:34 . Memory (MB): peak = 1534.375 ; gain = 657.047
 ---------------------------------------------------------------------------------
  Sort Area is  Result0_0 : 0 0 : 3101 5879 : Used 1 time 0
  Sort Area is  Result0_0 : 0 1 : 2778 5879 : Used 1 time 0
@@ -255,13 +267,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1531.559 ; gain = 653.965
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:42 . Memory (MB): peak = 1534.375 ; gain = 657.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1531.559 ; gain = 653.965
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:43 . Memory (MB): peak = 1534.375 ; gain = 657.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -282,7 +294,7 @@ Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-7052] The timing for the instance i_1316 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:30 . Memory (MB): peak = 1531.559 ; gain = 653.965
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:43 . Memory (MB): peak = 1534.375 ; gain = 657.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -300,37 +312,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1531.559 ; gain = 653.965
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:50 . Memory (MB): peak = 1534.375 ; gain = 657.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1531.559 ; gain = 653.965
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:50 . Memory (MB): peak = 1534.375 ; gain = 657.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1531.559 ; gain = 653.965
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:50 . Memory (MB): peak = 1534.375 ; gain = 657.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1531.559 ; gain = 653.965
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:50 . Memory (MB): peak = 1534.375 ; gain = 657.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1531.559 ; gain = 653.965
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:50 . Memory (MB): peak = 1534.375 ; gain = 657.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1531.559 ; gain = 653.965
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:50 . Memory (MB): peak = 1534.375 ; gain = 657.047
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -347,46 +359,46 @@ Report Cell Usage:
 |      |Cell     |Count |
 +------+---------+------+
 |1     |BUFG     |     2|
-|2     |CARRY4   |   342|
-|3     |LUT1     |    27|
-|4     |LUT2     |   115|
+|2     |CARRY4   |   364|
+|3     |LUT1     |    31|
+|4     |LUT2     |   117|
 |5     |LUT3     |   200|
-|6     |LUT4     |   121|
-|7     |LUT5     |  1016|
-|8     |LUT6     |   364|
+|6     |LUT4     |   123|
+|7     |LUT5     |  1028|
+|8     |LUT6     |   372|
 |9     |MUXF7    |     9|
 |10    |RAM32M   |    10|
 |11    |RAM32X1D |     4|
 |12    |RAMB18E1 |     1|
-|13    |FDRE     |   107|
+|13    |FDRE     |   192|
 |14    |FDSE     |     4|
 |15    |IBUF     |    17|
 |16    |OBUF     |    32|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1531.559 ; gain = 653.965
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:50 . Memory (MB): peak = 1534.375 ; gain = 657.047
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:33 . Memory (MB): peak = 1531.559 ; gain = 554.941
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:34 . Memory (MB): peak = 1531.559 ; gain = 653.965
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:48 . Memory (MB): peak = 1534.375 ; gain = 554.781
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:50 . Memory (MB): peak = 1534.375 ; gain = 657.047
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1531.559 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 366 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1534.375 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 388 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1531.559 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1534.375 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 14 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
 
-Synth Design complete | Checksum: 102389bd
+Synth Design complete | Checksum: 2eebc2ea
 INFO: [Common 17-83] Releasing license: Synthesis
-77 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+85 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:39 . Memory (MB): peak = 1531.559 ; gain = 1064.590
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1531.559 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:56 . Memory (MB): peak = 1534.375 ; gain = 1066.434
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1534.375 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.runs/synth_1/Nexys4DDR.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Nexys4DDR_utilization_synth.rpt -pb Nexys4DDR_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 14 15:18:25 2024...
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 16 00:43:07 2024...

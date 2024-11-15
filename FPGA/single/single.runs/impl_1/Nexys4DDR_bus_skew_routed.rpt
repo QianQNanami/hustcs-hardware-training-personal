@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Thu Nov 14 15:19:44 2024
+| Date         : Sat Nov 16 00:48:20 2024
 | Host         : Expect2004 running 64-bit major release  (build 9200)
 | Command      : report_bus_skew -warn_on_violation -file Nexys4DDR_bus_skew_routed.rpt -pb Nexys4DDR_bus_skew_routed.pb -rpx Nexys4DDR_bus_skew_routed.rpx
 | Design       : Nexys4DDR

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date             : Thu Nov 14 15:19:44 2024
+| Date             : Sat Nov 16 00:48:20 2024
 | Host             : Expect2004 running 64-bit major release  (build 9200)
 | Command          : report_power -file Nexys4DDR_power_routed.rpt -pb Nexys4DDR_power_summary_routed.pb -rpx Nexys4DDR_power_routed.rpx
 | Design           : Nexys4DDR
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 89.532 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 89.320 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 88.735                           |
+| Dynamic (W)              | 88.523                           |
 | Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,19 +52,19 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic              |    27.345 |     2398 |       --- |             --- |
-|   LUT as Logic           |    24.291 |     1767 |     63400 |            2.79 |
-|   CARRY4                 |     2.512 |      342 |     15850 |            2.16 |
+| Slice Logic              |    27.375 |     2541 |       --- |             --- |
+|   LUT as Logic           |    24.238 |     1795 |     63400 |            2.83 |
+|   CARRY4                 |     2.557 |      364 |     15850 |            2.30 |
 |   LUT as Distributed RAM |     0.456 |       44 |     19000 |            0.23 |
-|   Register               |     0.051 |      119 |    126800 |            0.09 |
-|   BUFG                   |     0.018 |        2 |        32 |            6.25 |
+|   Register               |     0.088 |      204 |    126800 |            0.16 |
+|   BUFG                   |     0.020 |        2 |        32 |            6.25 |
 |   F7/F8 Muxes            |     0.017 |        9 |     63400 |            0.01 |
-|   Others                 |     0.000 |       16 |       --- |             --- |
-| Signals                  |    26.317 |     2263 |       --- |             --- |
-| Block RAM                |     0.130 |      0.5 |       135 |            0.37 |
+|   Others                 |     0.000 |       24 |       --- |             --- |
+| Signals                  |    26.053 |     2386 |       --- |             --- |
+| Block RAM                |     0.153 |      0.5 |       135 |            0.37 |
 | I/O                      |    34.942 |       49 |       210 |           23.33 |
 | Static Power             |     0.797 |          |           |                 |
-| Total                    |    89.532 |          |           |                 |
+| Total                    |    89.320 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |    54.413 |      53.851 |      0.563 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |    54.200 |      53.637 |      0.563 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     1.371 |       1.278 |      0.093 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     9.875 |       9.871 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -83,7 +83,7 @@ Table of Contents
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.028 |       0.010 |      0.018 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.030 |       0.012 |      0.018 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -141,32 +141,36 @@ Table of Contents
 +--------------------------------------+-----------+
 | Name                                 | Power (W) |
 +--------------------------------------+-----------+
-| Nexys4DDR                            |    88.735 |
-|   clk_divide                         |     0.117 |
-|   clk_divide_led                     |     0.118 |
-|   cpu                                |    49.006 |
+| Nexys4DDR                            |    88.523 |
+|   clk_divide_128hz                   |     0.092 |
+|   clk_divide_1hz                     |     0.137 |
+|   clk_divide_32hz                    |     0.129 |
+|   clk_divide_4hz                     |     0.149 |
+|   clk_divide_512hz                   |     0.088 |
+|   clk_divide_led                     |     0.138 |
+|   cpu                                |    48.308 |
 |     LedRegister                      |     0.022 |
-|     adder1                           |     0.776 |
+|     adder1                           |     0.808 |
 |     adder_BE                         |     0.208 |
-|     adder_JAL                        |     0.548 |
-|     alu                              |    29.657 |
-|     regfile                          |    16.040 |
-|       registers_reg_r1_0_31_0_5      |     0.255 |
-|       registers_reg_r1_0_31_12_17    |     0.323 |
-|       registers_reg_r1_0_31_18_23    |     0.352 |
-|       registers_reg_r1_0_31_24_29    |     0.399 |
-|       registers_reg_r1_0_31_30_31    |     0.089 |
-|       registers_reg_r1_0_31_30_31__0 |     0.082 |
-|       registers_reg_r1_0_31_6_11     |     0.353 |
-|       registers_reg_r2_0_31_0_5      |     0.285 |
-|       registers_reg_r2_0_31_12_17    |     0.704 |
-|       registers_reg_r2_0_31_18_23    |     0.750 |
-|       registers_reg_r2_0_31_24_29    |     0.817 |
-|       registers_reg_r2_0_31_30_31    |     0.151 |
-|       registers_reg_r2_0_31_30_31__0 |     0.146 |
-|       registers_reg_r2_0_31_6_11     |     0.662 |
-|     register_PC                      |     1.755 |
-|   led_counter                        |     0.875 |
+|     adder_JAL                        |     0.569 |
+|     alu                              |    29.581 |
+|     regfile                          |    15.381 |
+|       registers_reg_r1_0_31_0_5      |     0.222 |
+|       registers_reg_r1_0_31_12_17    |     0.311 |
+|       registers_reg_r1_0_31_18_23    |     0.327 |
+|       registers_reg_r1_0_31_24_29    |     0.380 |
+|       registers_reg_r1_0_31_30_31    |     0.070 |
+|       registers_reg_r1_0_31_30_31__0 |     0.071 |
+|       registers_reg_r1_0_31_6_11     |     0.306 |
+|       registers_reg_r2_0_31_0_5      |     0.230 |
+|       registers_reg_r2_0_31_12_17    |     0.661 |
+|       registers_reg_r2_0_31_18_23    |     0.708 |
+|       registers_reg_r2_0_31_24_29    |     0.772 |
+|       registers_reg_r2_0_31_30_31    |     0.148 |
+|       registers_reg_r2_0_31_30_31__0 |     0.129 |
+|       registers_reg_r2_0_31_6_11     |     0.627 |
+|     register_PC                      |     1.740 |
+|   led_counter                        |     0.880 |
 +--------------------------------------+-----------+
 
 
