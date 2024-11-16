@@ -124,6 +124,7 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 5
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 10  }
   open_checkpoint Nexys4DDR_routed.dcp
   set_property webtalk.parent_dir D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.cache/wt [current_project]

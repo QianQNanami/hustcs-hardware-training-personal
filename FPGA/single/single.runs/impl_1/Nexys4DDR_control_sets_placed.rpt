@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Sat Nov 16 00:47:35 2024
+| Date         : Sat Nov 16 15:41:02 2024
 | Host         : Expect2004 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Nexys4DDR_control_sets_placed.rpt
 | Design       : Nexys4DDR
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    12 |
-|    Minimum number of control sets                        |    12 |
+| Total control sets                                       |    46 |
+|    Minimum number of control sets                        |    46 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    36 |
+| Unused register locations in slices containing registers |    35 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,7 +39,7 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    12 |
+| Total control sets |    46 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     1 |
@@ -47,7 +47,7 @@ Table of Contents
 | >= 10 to < 12      |     1 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     8 |
+| >= 16              |    42 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              17 |           10 |
+| No           | No                    | No                     |              17 |            9 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |             124 |           33 |
-| Yes          | No                    | No                     |              63 |           34 |
+| Yes          | No                    | No                     |            1056 |          550 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -70,21 +70,55 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-----------------------------+-----------------------------------------------+----------------------------------------+------------------+----------------+--------------+
-|         Clock Signal        |                 Enable Signal                 |            Set/Reset Signal            | Slice Load Count | Bel Load Count | Bels / Slice |
-+-----------------------------+-----------------------------------------------+----------------------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG              |                                               |                                        |                4 |              6 |         1.50 |
-|  clk_divide_led/clk_N_reg_0 |                                               | led_counter/id[1]                      |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG              |                                               | clk_divide_led/counter[8]_i_1_n_0      |                2 |              9 |         4.50 |
-|  clk_divide_led/clk_N_reg_0 |                                               |                                        |                6 |             11 |         1.83 |
-|  clk_IBUF_BUFG              |                                               | clk_divide_512hz/counter[0]_i_1__0_n_0 |                5 |             17 |         3.40 |
-|  clk_IBUF_BUFG              |                                               | clk_divide_128hz/counter[0]_i_1__1_n_0 |                5 |             19 |         3.80 |
-|  clk_IBUF_BUFG              |                                               | clk_divide_32hz/counter[0]_i_1__2_n_0  |                6 |             21 |         3.50 |
-|  clk_IBUF_BUFG              |                                               | clk_divide_4hz/counter[0]_i_1__3_n_0   |                6 |             24 |         4.00 |
-|  clk_IBUF_BUFG              |                                               | clk_divide_1hz/clear                   |                7 |             26 |         3.71 |
-|  CLKCPU_BUFG                | cpu/regfile/registers_reg_r1_0_31_0_5_i_10_96 |                                        |               13 |             31 |         2.38 |
-|  CLKCPU_BUFG                | cpu/regfile/WE0                               |                                        |               21 |             32 |         1.52 |
-|  CLKCPU_BUFG                | cpu/regfile/RegWrite                          |                                        |               11 |             88 |         8.00 |
-+-----------------------------+-----------------------------------------------+----------------------------------------+------------------+----------------+--------------+
++-----------------------------+------------------------------------------+----------------------------------------+------------------+----------------+--------------+
+|         Clock Signal        |               Enable Signal              |            Set/Reset Signal            | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------+------------------------------------------+----------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG              |                                          |                                        |                5 |              6 |         1.20 |
+|  clk_divide_led/clk_N_reg_0 |                                          | led_counter/id[1]                      |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG              |                                          | clk_divide_led/counter[8]_i_1_n_0      |                2 |              9 |         4.50 |
+|  clk_divide_led/clk_N_reg_0 |                                          |                                        |                4 |             11 |         2.75 |
+|  clk_IBUF_BUFG              |                                          | clk_divide_512hz/counter[0]_i_1__0_n_0 |                5 |             17 |         3.40 |
+|  clk_IBUF_BUFG              |                                          | clk_divide_128hz/counter[0]_i_1__1_n_0 |                5 |             19 |         3.80 |
+|  clk_IBUF_BUFG              |                                          | clk_divide_32hz/counter[0]_i_1__2_n_0  |                6 |             21 |         3.50 |
+|  clk_IBUF_BUFG              |                                          | clk_divide_4hz/counter[0]_i_1__3_n_0   |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG              |                                          | clk_divide_1hz/clear                   |                7 |             26 |         3.71 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_15[0]    |                                        |               13 |             32 |         2.46 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_17[0]    |                                        |               17 |             32 |         1.88 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_22[0]    |                                        |               17 |             32 |         1.88 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_4[0]     |                                        |               13 |             32 |         2.46 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_20[0]    |                                        |               17 |             32 |         1.88 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_19[0]    |                                        |               14 |             32 |         2.29 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_11[0]    |                                        |               17 |             32 |         1.88 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_23[0]    |                                        |               11 |             32 |         2.91 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_14[0]    |                                        |               14 |             32 |         2.29 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_3[0]     |                                        |               21 |             32 |         1.52 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_10[0]    |                                        |               25 |             32 |         1.28 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_18[0]    |                                        |               16 |             32 |         2.00 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_6[0]     |                                        |               13 |             32 |         2.46 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_16[0]    |                                        |               15 |             32 |         2.13 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_21[0]    |                                        |               20 |             32 |         1.60 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_7[0]     |                                        |               17 |             32 |         1.88 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_8[0]     |                                        |               15 |             32 |         2.13 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_9[0]     |                                        |               14 |             32 |         2.29 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_2[0]     |                                        |               24 |             32 |         1.33 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_5[0]     |                                        |               23 |             32 |         1.39 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[3]_3[0]     |                                        |               16 |             32 |         2.00 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[3]_2[0]     |                                        |               18 |             32 |         1.78 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[3]_72[0]    |                                        |               12 |             32 |         2.67 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[3]_73[0]    |                                        |               16 |             32 |         2.00 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[3]_68[0]    |                                        |               18 |             32 |         1.78 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[3]_69[0]    |                                        |               12 |             32 |         2.67 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_12[0]    |                                        |               14 |             32 |         2.29 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[3]_70[0]    |                                        |               17 |             32 |         1.88 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[3]_71[0]    |                                        |               16 |             32 |         2.00 |
+|  CLKCPU_BUFG                | cpu/register_PC/E[0]                     |                                        |               18 |             32 |         1.78 |
+|  CLKCPU_BUFG                | cpu/regfile/WE0                          |                                        |               18 |             32 |         1.78 |
+|  CLKCPU_BUFG                | cpu/regfile/WE0_0                        |                                        |               21 |             32 |         1.52 |
+|  CLKCPU_BUFG                | cpu/register_PC/reg_data_reg[2]_13[0]    |                                        |               18 |             32 |         1.78 |
+|  CLKCPU_BUFG                | cpu/register_PC/registers[1][11]_i_2_1   |                                        |               32 |            128 |         4.00 |
+|  CLKCPU_BUFG                | cpu/register_PC/mem_reg_0_255_0_0_i_16_0 |                                        |               32 |            128 |         4.00 |
+|  CLKCPU_BUFG                | cpu/register_PC/mem_reg_0_255_0_0_i_16_1 |                                        |               32 |            128 |         4.00 |
+|  CLKCPU_BUFG                | cpu/register_PC/registers[1][11]_i_2_0   |                                        |               32 |            128 |         4.00 |
++-----------------------------+------------------------------------------+----------------------------------------+------------------+----------------+--------------+
 
 

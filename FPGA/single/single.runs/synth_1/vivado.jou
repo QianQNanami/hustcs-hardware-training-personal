@@ -3,8 +3,8 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sat Nov 16 00:42:01 2024
-# Process ID: 33776
+# Start of session at: Sat Nov 16 15:39:14 2024
+# Process ID: 10408
 # Current directory: D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.runs/synth_1
 # Command line: vivado.exe -log Nexys4DDR.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Nexys4DDR.tcl
 # Log file: D:/LiuBainian/Project/HardwareCourseDesign/FPGA/single/single.runs/synth_1/Nexys4DDR.vds
