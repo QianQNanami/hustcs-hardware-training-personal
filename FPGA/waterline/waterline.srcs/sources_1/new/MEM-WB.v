@@ -47,11 +47,7 @@ module MEMWB (
     input BEin,
     output BEout,
     input [31:0] ALUResultin,
-    output [31:0] ALUResultout,
-    input [31:0] R1in,
-    output [31:0] R1out,
-    input [31:0] R2in,
-    output [31:0] R2out
+    output [31:0] ALUResultout
 );
     Locker #(
         .WIDTH(1)
@@ -271,26 +267,6 @@ module MEMWB (
         .EN(EN),
         .in(ALUResultin),
         .out(ALUResultout)
-    );
-
-    Locker #(
-        .WIDTH(32)
-    ) locker_R1 (
-        .CLK(CLK),
-        .RST(RST),
-        .EN(EN),
-        .in(R1in),
-        .out(R1out)
-    );
-
-    Locker #(
-        .WIDTH(32)
-    ) locker_R2 (
-        .CLK(CLK),
-        .RST(RST),
-        .EN(EN),
-        .in(R2in),
-        .out(R2out)
     );
 
 endmodule

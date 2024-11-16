@@ -345,6 +345,109 @@ module SingleCycleWaterLineCPU (
         .Sel(MEM_LBU)
     );
 
+    wire WB_MemToReg, WB_MemWrite, WB_ALUSrcB, WB_BE;
+    wire [3:0] WB_Aluop;
+    wire WB_ecall, WB_Stype, WB_BEQ, WB_BNE, WB_JAL, WB_JALR, WB_LBU, WB_BLTU;
+    wire [31:0] WB_PC, WB_PCP4, WB_BEADDR, WB_JALADDR, WB_ALUResult;
+    wire [31:0] WB_IR, WB_Mem;
 
+    MEMWB MEM_WB (
+        .CLK(CLK),
+        .EN(ENS),
+        .RST(RESETS),
+        .RegWritein(MEM_RegWrite),
+        .RegWriteout(WB_RegWrite),
+        .MemtoRegin(MEM_MemToReg),
+        .MemtoRegout(WB_MemToReg),
+        .MemWritein(MEM_MemWrite),
+        .MemWriteout(WB_MemWrite),
+        .ALUopin(MEM_Aluop),
+        .ALUopout(WB_Aluop),
+        .ALUSrcin(MEM_AluSrcB),
+        .ALUSrcout(WB_ALUSrcB),
+        .ecallin(MEM_ecall),
+        .ecallout(WB_ecall),
+        .Stypein(MEM_Stype),
+        .Stypeout(WB_Stype),
+        .BEQin(MEM_BEQ),
+        .BEQout(WB_BEQ),
+        .BNEin(MEM_BNE),
+        .BNEout(WB_BNE),
+        .JALin(MEM_JAL),
+        .JALout(WB_JAL),
+        .JALRin(MEM_JALR),
+        .JALRout(WB_JALR),
+        .LBUin(MEM_LBU),
+        .LBUout(WB_LBU),
+        .BLTUin(MEM_BLTU),
+        .BLTUout(WB_BLTU),
+        .IRin(MEM_IR),
+        .IRout(WB_IR),
+        .Widin(MEM_Wid),
+        .Widout(WB_Wid),
+        .Memin(MEM_Mem),
+        .Memout(WB_Mem),
+        .BEADDRin(MEM_BEADDR),
+        .BEADDRout(WB_BEADDR),
+        .PCin(MEM_PC),
+        .PCout(WB_PC),
+        .PCP4in(MEM_PCP4),
+        .PCP4out(WB_PCP4),
+        .JALADDRin(MEM_JALADDR),
+        .JALADDRout(WB_JALADDR),
+        .BEin(MEM_BE),
+        .BEout(WB_BE),
+        .ALUResultin(MEM_ALUOUT),
+        .ALUResultout(WB_ALUResult)
+    );
 
+    wire WB_JALSignal;
+    assign WB_JALSignal = WB_JAL | WB_JALR;
+
+    wire [31:0] mux2x1_WB_1_result;
+    MUX2x1 #(
+        .WIDTH(32)
+    ) mux2x1_WB_1 (
+        .A(WB_ALUResult),
+        .B(WB_Mem),
+        .Dout(mux2x1_WB_1_result),
+        .Sel(WB_MemToReg)
+    );
+    MUX2x1 #(
+        .WIDTH(32)
+    ) mux2x1_WB_2 (
+        .A(mux2x1_WB_1_result),
+        .B(WB_PCP4),
+        .Dout(RDin),
+        .Sel(WB_JALSignal)
+    );
+
+    wire [15:0] TotalCycle;
+    Counter counter (
+        .Clk(CLK),
+        .WE(~WB_ecall),
+        .Count(TotalCycle)
+    );
+
+    wire comparator_equal;
+    Comparator #(
+        .WIDTH(32)
+    ) comparator (
+        .A(ID_R1),
+        .B(32'h22),
+        .larger(),
+        .equal(comparator_equal),
+        .smaller()
+    );
+    assign halt = ~comparator_equal & WB_ecall;
+
+    Register #(
+        .WIDTH(32)
+    ) register_LED (
+        .Clk(CLK),
+        .WE(comparator_equal & WB_ecall),
+        .RST(1'b0),
+        .Din(ID_R2),
+        .Dout(LedData)
+    );
 endmodule
