@@ -54,7 +54,7 @@ module EXMEM (
     output [31:0] IRout
 );
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_RegWrite (
         .CLK(CLK),
         .RST(RST),
@@ -64,7 +64,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_MemtoReg (
         .CLK(CLK),
         .RST(RST),
@@ -74,7 +74,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_MemWrite (
         .CLK(CLK),
         .RST(RST),
@@ -84,7 +84,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(4)
+        .WID(4)
     ) locker_ALUop (
         .CLK(CLK),
         .RST(RST),
@@ -94,7 +94,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_ALUSrc (
         .CLK(CLK),
         .RST(RST),
@@ -104,7 +104,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_ecall (
         .CLK(CLK),
         .RST(RST),
@@ -114,7 +114,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_Stype (
         .CLK(CLK),
         .RST(RST),
@@ -124,7 +124,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_BNE (
         .CLK(CLK),
         .RST(RST),
@@ -134,7 +134,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_BEQ (
         .CLK(CLK),
         .RST(RST),
@@ -144,17 +144,17 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_JAL (
         .CLK(CLK),
         .RST(RST),
-        .EN(EN).
+        .EN(EN),
         .in(JALin),
         .out(JALout)
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_JALR (
         .CLK(CLK),
         .RST(RST),
@@ -164,17 +164,17 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_LBU (
         .CLK(CLK),
-        .RST(RST)
+        .RST(RST),
         .EN(EN),
         .in(LBUin),
         .out(LBUout)
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_BLTU (
         .CLK(CLK),
         .RST(RST),
@@ -184,7 +184,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_R1 (
         .CLK(CLK),
         .RST(RST),
@@ -194,7 +194,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_R2 (
         .CLK(CLK),
         .RST(RST),
@@ -204,7 +204,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(5)
+        .WID(5)
     ) locker_Wid (
         .CLK(CLK),
         .RST(RST),
@@ -214,7 +214,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_Imm (
         .CLK(CLK),
         .RST(RST),
@@ -224,7 +224,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_BEADDR (
         .CLK(CLK),
         .RST(RST),
@@ -234,7 +234,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_PC (
         .CLK(CLK),
         .RST(RST),
@@ -244,7 +244,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_PCP4 (
         .CLK(CLK),
         .RST(RST),
@@ -254,7 +254,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_JALADDR (
         .CLK(CLK),
         .RST(RST),
@@ -264,7 +264,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_BE (
         .CLK(CLK),
         .RST(RST),
@@ -274,7 +274,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_ALUResult (
         .CLK(CLK),
         .RST(RST),
@@ -284,7 +284,7 @@ module EXMEM (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_IR (
         .CLK(CLK),
         .RST(RST),

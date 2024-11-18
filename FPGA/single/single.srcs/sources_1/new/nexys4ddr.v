@@ -10,8 +10,8 @@ module Nexys4DDR (
     // On the Nexys4 DDR, the SW[15] is the leftmost switch
 
     // Use SW[15:10] to select the data to display
-    // SW[15]: PC
-    // SW[14]: IR
+    // SW[15]: IF_PC
+    // SW[14]: IF_IR
     // SW[13]: MDin
     // SW[12]: RDin
     // SW[11]: MemWrite

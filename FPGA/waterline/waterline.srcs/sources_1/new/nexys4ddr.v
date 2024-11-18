@@ -8,25 +8,77 @@ module Nexys4DDR (
     output [15:0] LED
 );
     // On the Nexys4 DDR, the SW[15] is the leftmost switch
+
     // Use SW[15:10] to select the data to display
-    // SW[15]: PC
-    // SW[14]: IR
+    // SW[15]: ID_PC
+    // SW[14]: ID_IR
     // SW[13]: MDin
     // SW[12]: RDin
     // SW[11]: MemWrite
     // SW[10]: RegWrite
     // If none or multiple switches are on, display the LedData
+
+    // Use SW[9:6] to select the frequency of the clock
+    // SW[9]: 500 Hz
+    // SW[8]: 128 Hz
+    // SW[7]: 32 Hz
+    // SW[6]: 4 Hz
+    // If none or multiple switches are on, use 1 Hz
+
     // Use SW[0] for button Go
+
     assign LED = SW;
-    wire Go, CLKCPU, CLKLED;
+    wire Go, CLKLED;
     assign Go = SW[0];
     wire [31:0] LedData, PC, IR;
+
+    wire CLK1, CLK500, CLK128, CLK32, CLK4;
+    reg CLKCPU;
+
     ClockDivider #(
-        .N(100_000_000)
-    ) clk_divide(
+        .N(400_000_000) // 1HZ
+    ) clk_divide_1hz(
         .clk(clk),
-        .clk_N(CLKCPU)
+        .clk_N(CLK1)
     );
+
+    ClockDivider #(
+        .N(200_000) // 500HZ
+    ) clk_divide_512hz(
+        .clk(clk),
+        .clk_N(CLK500)
+    );
+
+    ClockDivider #(
+        .N(781250) // 128HZ
+    ) clk_divide_128hz(
+        .clk(clk),
+        .clk_N(CLK128)
+    );
+
+    ClockDivider #(
+        .N(3125000) // 32HZ
+    ) clk_divide_32hz(
+        .clk(clk),
+        .clk_N(CLK32)
+    );
+
+    ClockDivider #(
+        .N(25000000) // 4HZ
+    ) clk_divide_4hz(
+        .clk(clk),
+        .clk_N(CLK4)
+    );
+
+    always @(*) begin
+        case(SW[9:6])
+            4'b1000: CLKCPU = CLK500;
+            4'b0100: CLKCPU = CLK128;
+            4'b0010: CLKCPU = CLK32;
+            4'b0001: CLKCPU = CLK4;
+            default: CLKCPU = CLK1;
+        endcase
+    end
 
     ClockDivider #(
         .N(1000)
@@ -41,12 +93,12 @@ module Nexys4DDR (
     );
     wire [31:0] RDin, MDin;
     wire MemWrite, RegWrite;
-    SingleCycleCPU cpu(
+    RedirectedFiveStagedPipelinedCPU cpu(
         .Go(Go),
         .CLK(CLKCPU),
         .LedData(LedData),
-        .PC(PC),
-        .IR(IR),
+        .IF_PC(PC),
+        .IF_IR(IR),
         .MDin(MDin),
         .RDin(RDin),
         .MemWrite(MemWrite),

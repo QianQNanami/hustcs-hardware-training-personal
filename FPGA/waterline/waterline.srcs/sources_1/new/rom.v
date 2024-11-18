@@ -6,7 +6,7 @@ module InstructionROM (
 );
     reg [31:0] mem [0:1023];
     initial begin
-        $readmemh("", mem, 0, 1023);
+        $readmemh("D:/LiuBainian/Project/HardwareCourseDesign/single-cycle-test.hex", mem, 0, 1023);
     end
     assign Data = mem[Addr];
 endmodule

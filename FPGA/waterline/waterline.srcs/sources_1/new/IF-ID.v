@@ -12,7 +12,7 @@ module IFID (
     output [31:0] IRout
 );
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_PC (
         .CLK(CLK),
         .RST(RST),
@@ -22,7 +22,7 @@ module IFID (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_PCP4 (
         .CLK(CLK),
         .RST(RST),
@@ -32,7 +32,7 @@ module IFID (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_IR (
         .CLK(CLK),
         .RST(RST),

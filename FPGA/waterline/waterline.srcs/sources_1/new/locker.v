@@ -1,17 +1,17 @@
 `timescale 1ns / 1ps
 
 module Locker #(
-    parameter WIDTH = 32
+    parameter WID = 32
 ) (
     input CLK,
     input RST,
     input EN,
-    input [WIDTH-1:0] in,
-    output [WIDTH-1:0] out
+    input [WID-1:0] in,
+    output [WID-1:0] out
 );
-    wire temp;
+    wire [WID-1:0] temp;
     MUX2x1 #(
-        .WIDTH(WIDTH)
+        .DATAWIDTH(WID)
     ) mux (
         .A(in),
         .B(0),
@@ -19,11 +19,11 @@ module Locker #(
         .Dout(temp)
     );
     Register #(
-        .WIDTH(WIDTH)
-    ) reg (
+        .WIDTH(WID)
+    ) regi (
         .Clk(CLK),
         .RST(1'b0),
-        .EN(EN),
+        .WE(EN),
         .Din(temp),
         .Dout(out)
     );

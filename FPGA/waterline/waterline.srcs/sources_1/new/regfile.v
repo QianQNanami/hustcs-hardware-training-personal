@@ -22,6 +22,7 @@ module RegFile (
         if (WE) begin
             registers[WAddr] <= Din;
         end
+        registers[0] <= 0;
     end
 
     assign R1 = registers[R1Addr];

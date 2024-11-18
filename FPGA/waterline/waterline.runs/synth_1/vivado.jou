@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Nov 17 03:00:28 2024
+# Process ID: 9796
+# Current directory: D:/LiuBainian/Project/HardwareCourseDesign/FPGA/waterline/waterline.runs/synth_1
+# Command line: vivado.exe -log Nexys4DDR.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Nexys4DDR.tcl
+# Log file: D:/LiuBainian/Project/HardwareCourseDesign/FPGA/waterline/waterline.runs/synth_1/Nexys4DDR.vds
+# Journal file: D:/LiuBainian/Project/HardwareCourseDesign/FPGA/waterline/waterline.runs/synth_1\vivado.jou
+# Running On: Expect2004, OS: Windows, CPU Frequency: 2688 MHz, CPU Physical cores: 14, Host memory: 16785 MB
+#-----------------------------------------------------------
+source Nexys4DDR.tcl -notrace

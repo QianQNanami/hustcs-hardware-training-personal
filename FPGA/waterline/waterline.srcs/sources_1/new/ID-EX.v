@@ -47,10 +47,14 @@ module IDEX (
     input [31:0] JALADDRin,
     output [31:0] JALADDRout,
     input [31:0] IRin,
-    output [31:0] IRout
+    output [31:0] IRout,
+    input [1:0] RSGOin,
+    output [1:0] RSGOout,
+    input [1:0] RTGOin,
+    output [1:0] RTGOout
 );
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_RegWrite (
         .CLK(CLK),
         .RST(RST),
@@ -60,7 +64,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_MemToReg (
         .CLK(CLK),
         .RST(RST),
@@ -70,7 +74,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_MemWrite (
         .CLK(CLK),
         .RST(RST),
@@ -80,7 +84,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(4)
+        .WID(4)
     ) locker_ALUop (
         .CLK(CLK),
         .RST(RST),
@@ -90,7 +94,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_ALUSrc (
         .CLK(CLK),
         .RST(RST),
@@ -100,7 +104,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_ecall (
         .CLK(CLK),
         .RST(RST),
@@ -110,7 +114,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_Stype (
         .CLK(CLK),
         .RST(RST),
@@ -120,7 +124,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_BEQ (
         .CLK(CLK),
         .RST(RST),
@@ -130,7 +134,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_BNE (
         .CLK(CLK),
         .RST(RST),
@@ -140,7 +144,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_JAL (
         .CLK(CLK),
         .RST(RST),
@@ -150,7 +154,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_JALR (
         .CLK(CLK),
         .RST(RST),
@@ -160,7 +164,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_LBU (
         .CLK(CLK),
         .RST(RST),
@@ -170,7 +174,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(1)
+        .WID(1)
     ) locker_BLTU (
         .CLK(CLK),
         .RST(RST),
@@ -180,7 +184,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_R1 (
         .CLK(CLK),
         .RST(RST),
@@ -190,7 +194,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_R2 (
         .CLK(CLK),
         .RST(RST),
@@ -200,7 +204,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(5)
+        .WID(5)
     ) locker_Wid (
         .CLK(CLK),
         .RST(RST),
@@ -210,7 +214,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_Imm (
         .CLK(CLK),
         .RST(RST),
@@ -220,7 +224,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_BEADDR (
         .CLK(CLK),
         .RST(RST),
@@ -230,7 +234,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_PC (
         .CLK(CLK),
         .RST(RST),
@@ -240,7 +244,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_PCP4 (
         .CLK(CLK),
         .RST(RST),
@@ -250,7 +254,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_JALADDR (
         .CLK(CLK),
         .RST(RST),
@@ -260,7 +264,7 @@ module IDEX (
     );
 
     Locker #(
-        .WIDTH(32)
+        .WID(32)
     ) locker_IR (
         .CLK(CLK),
         .RST(RST),
