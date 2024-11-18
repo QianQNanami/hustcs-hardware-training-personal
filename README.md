@@ -50,11 +50,43 @@ Also, you may use switches to select the frequency:
 
 ### Build and Run
 
-The project is based on `Vivado 2023.2`. You should open the `.xpr` file via the Vivado software and run simulation.
+The project is based on `Vivado 2023.2`. You should open the `.xpr` file via the Vivado software and Run Synthesis.
 
 ---
 
 ## FPGA: Redirected Five-stage Pipelined CPU
 
-Under working
+### Selectable Displayed Data
+
+The data that is displayed on the LED is selectable. You are to use switches to select the data to display.
+
+As is shown in the table, the following data is supported:
+
+| Data     | Switch On        |
+| -------- | ---------------- |
+| IF_PC    | SW[15]           |
+| IF_IR    | SW[14]           |
+| MDin     | SW[13]           |
+| RDin     | SW[12]           |
+| MemWrite | SW[11]           |
+| RegWrite | SW[10]           |
+| LedData  | None or Multiple |
+
+### Selectable Clock Frequency
+
+Here, I support five different clock frequency, according to the request of the Lab Task Book.
+
+Also, you may use switches to select the frequency:
+
+| Frequency | Switch On        |
+| --------- | ---------------- |
+| 500 Hz    | SW[9]            |
+| 128 Hz    | SW[8]            |
+| 32 Hz     | SW[7]            |
+| 4 Hz      | SW[6]            |
+| 1 Hz      | None or Multiple |
+
+### Build and Run
+
+The project is based on `Vivado 2023.2`. You should open the `.xpr` file via the Vivado software and Run Synthesis.
 
