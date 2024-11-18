@@ -48,14 +48,13 @@ Also, you may use switches to select the frequency:
 | 4 Hz      | SW[6]            |
 | 1 Hz      | None or Multiple |
 
-### Files and Modules
-
 ### Build and Run
 
-
+The project is based on `Vivado 2023.2`. You should open the `.xpr` file via the Vivado software and run simulation.
 
 ---
 
-## FPGA: Ideal Five-stage Pipelined CPU
+## FPGA: Redirected Five-stage Pipelined CPU
 
 Under working
+
