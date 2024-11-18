@@ -36,7 +36,7 @@ module Nexys4DDR (
     reg CLKCPU;
 
     ClockDivider #(
-        .N(400_000_000) // 1HZ
+        .N(100_000_000) // 1HZ
     ) clk_divide_1hz(
         .clk(clk),
         .clk_N(CLK1)

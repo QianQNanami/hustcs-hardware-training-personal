@@ -57,6 +57,7 @@ module RedirectedFiveStagedPipelinedCPU (
     wire [3:0] ID_AluOP;
     wire [1:0] ID_RSGO, ID_RTGO;
     wire RSU, RTU;
+    wire [31:0] MEM_ALUOUT;
     HardwiredController hardwired (
         .OP_CODE(ID_IR[6:2]),
         .Funct({ID_IR[30], ID_IR[25], ID_IR[14:12]}),
@@ -269,7 +270,7 @@ module RedirectedFiveStagedPipelinedCPU (
         .Sel(EX_AluSrcB)
     );
 
-    wire EX_ALUequal, EX_ALUless, EX_BE, EX_JUMP, EX_branch;
+    wire EX_ALUequal, EX_ALUless, EX_BE, EX_JUMP;
     wire [31:0] EX_Result;
     myALU alu (
         .A(ALUA),
@@ -309,7 +310,7 @@ module RedirectedFiveStagedPipelinedCPU (
         .Sel(EX_JALR)
     );
 
-    wire [31:0] MEM_PC, MEM_IR, MEM_PCP4, MEM_BEADDR, MEM_JALADDR, MEM_ALUOUT;
+    wire [31:0] MEM_PC, MEM_IR, MEM_PCP4, MEM_BEADDR, MEM_JALADDR;
     wire [31:0] MEM_R1, MEM_R2, MEM_Imm, MEM_Result;
     wire [4:0] MEM_Wid;
     wire MEM_BE;

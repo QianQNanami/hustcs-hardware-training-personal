@@ -273,4 +273,24 @@ module IDEX (
         .out(IRout)
     );
 
+    Locker #(
+        .WID(2)
+    ) locker_RSGO (
+        .CLK(CLK),
+        .RST(RST),
+        .EN(EN),
+        .in(RSGOin),
+        .out(RSGOout)
+    );
+
+    Locker #(
+        .WID(2)
+    ) locker_RTGO (
+        .CLK(CLK),
+        .RST(RST),
+        .EN(EN),
+        .in(RTGOin),
+        .out(RTGOout)
+    );
+
 endmodule

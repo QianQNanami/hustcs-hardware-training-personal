@@ -1,0 +1,339 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date             : Mon Nov 18 17:03:09 2024
+| Host             : Expect2004 running 64-bit major release  (build 9200)
+| Command          : report_power -file Nexys4DDR_power_routed.rpt -pb Nexys4DDR_power_summary_routed.pb -rpx Nexys4DDR_power_routed.rpx
+| Design           : Nexys4DDR
+| Device           : xc7a100tcsg324-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+-----------------------------------+
+| Total On-Chip Power (W)  | 119.645 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                      |
+| Power Budget Margin (W)  | NA                                |
+| Dynamic (W)              | 118.848                           |
+| Device Static (W)        | 0.797                             |
+| Effective TJA (C/W)      | 4.6                               |
+| Max Ambient (C)          | 0.0                               |
+| Junction Temperature (C) | 125.0                             |
+| Confidence Level         | Low                               |
+| Setting File             | ---                               |
+| Simulation Activity File | ---                               |
+| Design Nets Matched      | NA                                |
++--------------------------+-----------------------------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Slice Logic              |    37.234 |     6410 |       --- |             --- |
+|   LUT as Logic           |    30.439 |     2798 |     63400 |            4.41 |
+|   LUT as Distributed RAM |     2.752 |      512 |     19000 |            2.69 |
+|   CARRY4                 |     2.576 |      375 |     15850 |            2.37 |
+|   F7/F8 Muxes            |     0.813 |      701 |     63400 |            1.11 |
+|   Register               |     0.635 |     1806 |    126800 |            1.42 |
+|   BUFG                   |     0.020 |        2 |        32 |            6.25 |
+|   Others                 |     0.000 |       53 |       --- |             --- |
+| Signals                  |    45.933 |     4683 |       --- |             --- |
+| DSPs                     |     2.362 |        3 |       240 |            1.25 |
+| I/O                      |    33.318 |       49 |       210 |           23.33 |
+| Static Power             |     0.797 |          |           |                 |
+| Total                    |   119.645 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint    |       1.000 |    86.161 |      85.598 |      0.563 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     1.311 |       1.218 |      0.093 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     9.415 |       9.411 |      0.004 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
++-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 4.6                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------+-----------+
+| Name                         | Power (W) |
++------------------------------+-----------+
+| Nexys4DDR                    |   118.848 |
+|   clk_divide_128hz           |     0.091 |
+|   clk_divide_1hz             |     0.120 |
+|   clk_divide_32hz            |     0.123 |
+|   clk_divide_4hz             |     0.150 |
+|   clk_divide_512hz           |     0.103 |
+|   clk_divide_led             |     0.133 |
+|   cpu                        |    83.469 |
+|     EX_MEM                   |     8.223 |
+|       locker_ALUResult       |     6.743 |
+|       locker_LBU             |     0.001 |
+|       locker_PCP4            |     0.216 |
+|       locker_R1              |     0.127 |
+|       locker_R2              |     1.084 |
+|       locker_RegWrite        |     0.011 |
+|       locker_Wid             |     0.040 |
+|     ID_EX                    |    12.600 |
+|       locker_ALUSrc          |     0.087 |
+|       locker_ALUop           |     3.263 |
+|       locker_BEADDR          |     0.182 |
+|       locker_BEQ             |     0.009 |
+|       locker_Imm             |     0.748 |
+|       locker_JALADDR         |     0.194 |
+|       locker_PC              |     0.001 |
+|       locker_PCP4            |     0.199 |
+|       locker_R1              |     0.395 |
+|       locker_R2              |     0.204 |
+|       locker_RSGO            |     6.511 |
+|       locker_RTGO            |     0.754 |
+|       locker_RegWrite        |     0.010 |
+|       locker_Wid             |     0.041 |
+|     IF_ID                    |     3.243 |
+|       locker_IR              |     2.781 |
+|       locker_PC              |     0.241 |
+|       locker_PCP4            |     0.222 |
+|     MEM_WB                   |     1.849 |
+|       locker_ALUResult       |     0.125 |
+|       locker_JAL             |     0.026 |
+|       locker_Mem             |     0.116 |
+|       locker_MemtoReg        |     0.006 |
+|       locker_PCP4            |     0.158 |
+|       locker_R11             |     0.276 |
+|       locker_R21             |     0.167 |
+|       locker_RegWrite        |     0.064 |
+|       locker_Wid             |     0.909 |
+|       locker_ecall           |     0.003 |
+|     adder_ID_BEADDR          |     0.142 |
+|     adder_ID_JALADDR         |     0.145 |
+|     adder_IF_PCP4            |     0.242 |
+|     alu                      |    29.454 |
+|     mux2x1_ALUB              |     4.584 |
+|     mux2x1_MEMout            |     0.113 |
+|     mux2x1_R1_wire           |     0.617 |
+|     mux2x1_R2_wire           |     0.682 |
+|     mux2x1_WB_2              |     3.599 |
+|     mux2x1_imm               |     0.028 |
+|     mux2x1_j3                |     0.689 |
+|     mux4x1_ALUA              |     2.213 |
+|     mux4x1_ALUB              |     0.462 |
+|     mux4x1_MEMout            |     0.140 |
+|     ram                      |     5.080 |
+|       mem_reg_0_255_0_0      |     0.028 |
+|       mem_reg_0_255_10_10    |     0.030 |
+|       mem_reg_0_255_11_11    |     0.030 |
+|       mem_reg_0_255_12_12    |     0.030 |
+|       mem_reg_0_255_13_13    |     0.033 |
+|       mem_reg_0_255_14_14    |     0.030 |
+|       mem_reg_0_255_15_15    |     0.028 |
+|       mem_reg_0_255_16_16    |     0.034 |
+|       mem_reg_0_255_17_17    |     0.029 |
+|       mem_reg_0_255_18_18    |     0.036 |
+|       mem_reg_0_255_19_19    |     0.032 |
+|       mem_reg_0_255_1_1      |     0.031 |
+|       mem_reg_0_255_20_20    |     0.028 |
+|       mem_reg_0_255_21_21    |     0.028 |
+|       mem_reg_0_255_22_22    |     0.031 |
+|       mem_reg_0_255_23_23    |     0.030 |
+|       mem_reg_0_255_24_24    |     0.034 |
+|       mem_reg_0_255_25_25    |     0.032 |
+|       mem_reg_0_255_26_26    |     0.036 |
+|       mem_reg_0_255_27_27    |     0.030 |
+|       mem_reg_0_255_28_28    |     0.031 |
+|       mem_reg_0_255_29_29    |     0.030 |
+|       mem_reg_0_255_2_2      |     0.028 |
+|       mem_reg_0_255_30_30    |     0.032 |
+|       mem_reg_0_255_31_31    |     0.035 |
+|       mem_reg_0_255_3_3      |     0.028 |
+|       mem_reg_0_255_4_4      |     0.027 |
+|       mem_reg_0_255_5_5      |     0.026 |
+|       mem_reg_0_255_6_6      |     0.026 |
+|       mem_reg_0_255_7_7      |     0.027 |
+|       mem_reg_0_255_8_8      |     0.031 |
+|       mem_reg_0_255_9_9      |     0.027 |
+|       mem_reg_256_511_0_0    |     0.031 |
+|       mem_reg_256_511_10_10  |     0.027 |
+|       mem_reg_256_511_11_11  |     0.027 |
+|       mem_reg_256_511_12_12  |     0.031 |
+|       mem_reg_256_511_13_13  |     0.030 |
+|       mem_reg_256_511_14_14  |     0.032 |
+|       mem_reg_256_511_15_15  |     0.029 |
+|       mem_reg_256_511_16_16  |     0.033 |
+|       mem_reg_256_511_17_17  |     0.030 |
+|       mem_reg_256_511_18_18  |     0.034 |
+|       mem_reg_256_511_19_19  |     0.030 |
+|       mem_reg_256_511_1_1    |     0.033 |
+|       mem_reg_256_511_20_20  |     0.028 |
+|       mem_reg_256_511_21_21  |     0.032 |
+|       mem_reg_256_511_22_22  |     0.034 |
+|       mem_reg_256_511_23_23  |     0.029 |
+|       mem_reg_256_511_24_24  |     0.029 |
+|       mem_reg_256_511_25_25  |     0.032 |
+|       mem_reg_256_511_26_26  |     0.031 |
+|       mem_reg_256_511_27_27  |     0.030 |
+|       mem_reg_256_511_28_28  |     0.029 |
+|       mem_reg_256_511_29_29  |     0.030 |
+|       mem_reg_256_511_2_2    |     0.029 |
+|       mem_reg_256_511_30_30  |     0.029 |
+|       mem_reg_256_511_31_31  |     0.032 |
+|       mem_reg_256_511_3_3    |     0.028 |
+|       mem_reg_256_511_4_4    |     0.025 |
+|       mem_reg_256_511_5_5    |     0.028 |
+|       mem_reg_256_511_6_6    |     0.028 |
+|       mem_reg_256_511_7_7    |     0.027 |
+|       mem_reg_256_511_8_8    |     0.034 |
+|       mem_reg_256_511_9_9    |     0.037 |
+|       mem_reg_512_767_0_0    |     0.026 |
+|       mem_reg_512_767_10_10  |     0.030 |
+|       mem_reg_512_767_11_11  |     0.033 |
+|       mem_reg_512_767_12_12  |     0.035 |
+|       mem_reg_512_767_13_13  |     0.032 |
+|       mem_reg_512_767_14_14  |     0.032 |
+|       mem_reg_512_767_15_15  |     0.031 |
+|       mem_reg_512_767_16_16  |     0.033 |
+|       mem_reg_512_767_17_17  |     0.028 |
+|       mem_reg_512_767_18_18  |     0.037 |
+|       mem_reg_512_767_19_19  |     0.030 |
+|       mem_reg_512_767_1_1    |     0.028 |
+|       mem_reg_512_767_20_20  |     0.028 |
+|       mem_reg_512_767_21_21  |     0.029 |
+|       mem_reg_512_767_22_22  |     0.034 |
+|       mem_reg_512_767_23_23  |     0.030 |
+|       mem_reg_512_767_24_24  |     0.028 |
+|       mem_reg_512_767_25_25  |     0.038 |
+|       mem_reg_512_767_26_26  |     0.034 |
+|       mem_reg_512_767_27_27  |     0.030 |
+|       mem_reg_512_767_28_28  |     0.027 |
+|       mem_reg_512_767_29_29  |     0.032 |
+|       mem_reg_512_767_2_2    |     0.029 |
+|       mem_reg_512_767_30_30  |     0.030 |
+|       mem_reg_512_767_31_31  |     0.033 |
+|       mem_reg_512_767_3_3    |     0.032 |
+|       mem_reg_512_767_4_4    |     0.027 |
+|       mem_reg_512_767_5_5    |     0.028 |
+|       mem_reg_512_767_6_6    |     0.029 |
+|       mem_reg_512_767_7_7    |     0.027 |
+|       mem_reg_512_767_8_8    |     0.030 |
+|       mem_reg_512_767_9_9    |     0.033 |
+|       mem_reg_768_1023_0_0   |     0.028 |
+|       mem_reg_768_1023_10_10 |     0.029 |
+|       mem_reg_768_1023_11_11 |     0.033 |
+|       mem_reg_768_1023_12_12 |     0.032 |
+|       mem_reg_768_1023_13_13 |     0.033 |
+|       mem_reg_768_1023_14_14 |     0.033 |
+|       mem_reg_768_1023_15_15 |     0.030 |
+|       mem_reg_768_1023_16_16 |     0.031 |
+|       mem_reg_768_1023_17_17 |     0.029 |
+|       mem_reg_768_1023_18_18 |     0.039 |
+|       mem_reg_768_1023_19_19 |     0.028 |
+|       mem_reg_768_1023_1_1   |     0.030 |
+|       mem_reg_768_1023_20_20 |     0.029 |
+|       mem_reg_768_1023_21_21 |     0.030 |
+|       mem_reg_768_1023_22_22 |     0.034 |
+|       mem_reg_768_1023_23_23 |     0.030 |
+|       mem_reg_768_1023_24_24 |     0.030 |
+|       mem_reg_768_1023_25_25 |     0.038 |
+|       mem_reg_768_1023_26_26 |     0.036 |
+|       mem_reg_768_1023_27_27 |     0.031 |
+|       mem_reg_768_1023_28_28 |     0.029 |
+|       mem_reg_768_1023_29_29 |     0.033 |
+|       mem_reg_768_1023_2_2   |     0.030 |
+|       mem_reg_768_1023_30_30 |     0.033 |
+|       mem_reg_768_1023_31_31 |     0.033 |
+|       mem_reg_768_1023_3_3   |     0.028 |
+|       mem_reg_768_1023_4_4   |     0.027 |
+|       mem_reg_768_1023_5_5   |     0.031 |
+|       mem_reg_768_1023_6_6   |     0.026 |
+|       mem_reg_768_1023_7_7   |     0.027 |
+|       mem_reg_768_1023_8_8   |     0.032 |
+|       mem_reg_768_1023_9_9   |     0.027 |
+|     regfile                  |     4.862 |
+|     register_LED             |     0.518 |
+|     register_PC              |     3.986 |
+|   led_counter                |     0.670 |
++------------------------------+-----------+
+
+

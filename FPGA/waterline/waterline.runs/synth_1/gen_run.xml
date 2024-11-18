@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1731783624" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Nexys4DDR.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1731920415" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Nexys4DDR.dcp">
   <File Type="PA-TCL" Name="Nexys4DDR.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Nexys4DDR_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Nexys4DDR_reports.tcl"/>
@@ -159,6 +159,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/ram.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/redirect-judger.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

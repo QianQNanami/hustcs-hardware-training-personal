@@ -1,0 +1,127 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Mon Nov 18 17:02:29 2024
+| Host         : Expect2004 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Nexys4DDR_control_sets_placed.rpt
+| Design       : Nexys4DDR
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    49 |
+|    Minimum number of control sets                        |    49 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    50 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    49 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    45 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              17 |           11 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             124 |           33 |
+| Yes          | No                    | No                     |            1382 |          893 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             283 |          111 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------+-----------------------------------------------------+---------------------------------------------+------------------+----------------+--------------+
+|         Clock Signal        |                    Enable Signal                    |               Set/Reset Signal              | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------+-----------------------------------------------------+---------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG              |                                                     |                                             |                4 |              6 |         1.50 |
+|  clk_divide_led/clk_N_reg_0 |                                                     | led_counter/id[1]                           |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG              |                                                     | clk_divide_led/counter[8]_i_1_n_0           |                2 |              9 |         4.50 |
+|  clk_divide_led/clk_N_reg_0 |                                                     |                                             |                7 |             11 |         1.57 |
+|  clk_IBUF_BUFG              |                                                     | clk_divide_512hz/counter[0]_i_1__0_n_0      |                5 |             17 |         3.40 |
+|  clk_IBUF_BUFG              |                                                     | clk_divide_128hz/counter[0]_i_1__1_n_0      |                5 |             19 |         3.80 |
+|  clk_IBUF_BUFG              |                                                     | clk_divide_32hz/counter[0]_i_1__2_n_0       |                6 |             21 |         3.50 |
+|  clk_IBUF_BUFG              |                                                     | clk_divide_4hz/counter[0]_i_1__3_n_0        |                6 |             24 |         4.00 |
+|  clk_IBUF_BUFG              |                                                     | clk_divide_1hz/clear                        |                7 |             26 |         3.71 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_R11/regi/reg_data_reg[0]_0        |                                             |               12 |             32 |         2.67 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_1[0]     |                                             |               24 |             32 |         1.33 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_10[0]    |                                             |               24 |             32 |         1.33 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_11[0]    |                                             |               24 |             32 |         1.33 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/E[0]                     |                                             |               23 |             32 |         1.39 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_13[0]    |                                             |               24 |             32 |         1.33 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_0[0]     |                                             |               24 |             32 |         1.33 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_14[0]    |                                             |               25 |             32 |         1.28 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_15[0]    |                                             |               25 |             32 |         1.28 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_16[0]    |                                             |               25 |             32 |         1.28 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_17[0]    |                                             |               25 |             32 |         1.28 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_18[0]    |                                             |               22 |             32 |         1.45 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_19[0]    |                                             |               26 |             32 |         1.23 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_8[0]     |                                             |               25 |             32 |         1.28 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_20[0]    |                                             |               24 |             32 |         1.33 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_12[0]    |                                             |               24 |             32 |         1.33 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_9[0]     |                                             |               21 |             32 |         1.52 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_26[0]    |                                             |               22 |             32 |         1.45 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_28[0]    |                                             |               23 |             32 |         1.39 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_29[0]    |                                             |               23 |             32 |         1.39 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_23[0]    |                                             |               25 |             32 |         1.28 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_3[0]     |                                             |               23 |             32 |         1.39 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_6[0]     |                                             |               22 |             32 |         1.45 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_24[0]    |                                             |               21 |             32 |         1.52 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_4[0]     |                                             |               23 |             32 |         1.39 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_27[0]    |                                             |               22 |             32 |         1.45 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_22[0]    |                                             |               26 |             32 |         1.23 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_25[0]    |                                             |               22 |             32 |         1.45 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_7[0]     |                                             |               20 |             32 |         1.60 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_2[0]     |                                             |               24 |             32 |         1.33 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_21[0]    |                                             |               23 |             32 |         1.39 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_R11/regi/WE0                      |                                             |               15 |             32 |         2.13 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_Wid/regi/reg_data_reg[0]_5[0]     |                                             |               21 |             32 |         1.52 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_R11/regi/reg_data_reg[0]_0        | cpu/ID_EX/locker_PC/regi/reg_data_reg[0]    |               33 |             90 |         2.73 |
+|  CLKCPU_BUFG                | cpu/EX_MEM/locker_ALUResult/regi/reg_data_reg[10]_1 |                                             |               32 |            128 |         4.00 |
+|  CLKCPU_BUFG                | cpu/EX_MEM/locker_ALUResult/regi/reg_data_reg[0]_1  |                                             |               32 |            128 |         4.00 |
+|  CLKCPU_BUFG                | cpu/EX_MEM/locker_ALUResult/regi/reg_data_reg[0]_0  |                                             |               32 |            128 |         4.00 |
+|  CLKCPU_BUFG                | cpu/EX_MEM/locker_ALUResult/regi/reg_data_reg[11]_1 |                                             |               32 |            128 |         4.00 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_R11/regi/reg_data_reg[0]_1        | cpu/ID_EX/locker_BEQ/regi/reg_data_reg[0]_0 |               78 |            193 |         2.47 |
+|  CLKCPU_BUFG                | cpu/MEM_WB/locker_R11/regi/reg_data_reg[0]_1        |                                             |              141 |            326 |         2.31 |
++-----------------------------+-----------------------------------------------------+---------------------------------------------+------------------+----------------+--------------+
+
+

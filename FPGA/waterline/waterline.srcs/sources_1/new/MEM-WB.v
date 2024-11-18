@@ -273,4 +273,24 @@ module MEMWB (
         .out(ALUResultout)
     );
 
+    Locker #(
+        .WID(32)
+    ) locker_R11 (
+        .CLK(CLK),
+        .RST(RST),
+        .EN(EN),
+        .in(R1in),
+        .out(R1out)
+    );
+
+    Locker #(
+        .WID(32)
+    ) locker_R21 (
+        .CLK(CLK),
+        .RST(RST),
+        .EN(EN),
+        .in(R2in),
+        .out(R2out)
+    );
+
 endmodule
